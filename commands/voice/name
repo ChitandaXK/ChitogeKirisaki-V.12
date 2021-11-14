@@ -1,0 +1,29 @@
+const { MessageEmbed } = require('discord.js');
+const PlayStore = require("google-play-scraper");
+const { COLOR } = require('../../config.json')
+
+module.exports = {
+    name: 'name',
+    aliases: [],
+    category: 'Voice',
+    description: 'Create name voice channel.',
+    permission: ['Manage Channel', 'Manage Roles', 'Connect', 'Speak', 'Mute Members', 'Deafen Member', 'Move Members'],
+    permissionUser: [],
+    usage: ['name <name>'],
+    example: ['name music'],
+    run: async (chitanda, message, args) => {
+    
+    const channel = message.member.voice.channel;   
+    if (!channel) {
+      let embed = new MessageEmbed()
+        .setColor(COLOR)
+        .setDescription('Please Join ➕・New Session a voice channel.')
+      return message.channel.send(embed).then(async message => {
+           message.delete({ timeout: 15000 });
+  });
+    }
+      
+    
+    
+  }
+}

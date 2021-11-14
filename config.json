@@ -1,0 +1,10 @@
+{
+  "Prefix": [
+      "m!",
+      "m."
+    ],
+  "QUEUE_LIMIT": 0,
+  "COLOR": "#f11aaa",
+  "COLOROWN": "#ff0000",
+  "JumlahCommands": 39
+}
